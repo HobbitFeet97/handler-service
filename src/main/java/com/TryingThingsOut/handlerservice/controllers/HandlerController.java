@@ -2,6 +2,7 @@ package com.TryingThingsOut.handlerservice.controllers;
 
 import com.TryingThingsOut.handlerservice.config.Properties;
 import com.TryingThingsOut.handlerservice.services.api.MapperApi;
+import com.TryingThingsOut.handlerservice.utils.ExceptionHandler;
 import lombok.extern.slf4j.Slf4j;
 import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,8 @@ public class HandlerController {
     @Autowired
     private Properties props;
 
+    private ExceptionHandler exceptionHandler = new ExceptionHandler();
+
     @GetMapping("/health-check")
     public ResponseEntity<String> getHealthCheck() {
         log.info("Health check end-point called");
@@ -39,7 +42,7 @@ public class HandlerController {
             return ResponseEntity.ok(translatedQuestion);
         } catch (Exception e) {
             log.info("PATCH Translate question called unsuccessfully.");
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("PATCH Translate question called unsuccessfully.");
+            return exceptionHandler.handleException(e);
         }
     }
 
@@ -55,7 +58,7 @@ public class HandlerController {
             return ResponseEntity.ok(translatedSection);
         } catch (Exception e) {
             log.info("PATCH Translate section called unsuccessfully.");
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("PATCH Translate question called unsuccessfully.");
+            return exceptionHandler.handleException(e);
         }
     }
 
@@ -72,7 +75,7 @@ public class HandlerController {
             return ResponseEntity.ok(translatedObject);
         } catch (Exception e) {
             log.info("PATCH Translate section called unsuccessfully.");
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("PATCH Translate question called unsuccessfully.");
+            return exceptionHandler.handleException(e);
         }
     }
 

@@ -1,6 +1,7 @@
 package com.TryingThingsOut.handlerservice.services.impl;
 
 import com.TryingThingsOut.handlerservice.constants.ContractTypes;
+import com.TryingThingsOut.handlerservice.exceptions.NoSuchTranslatorException;
 import com.TryingThingsOut.handlerservice.utils.ResourceUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +17,7 @@ public class SmartServeMapperImpl extends MapperImpl {
     private static final ObjectMapper mapper = new ObjectMapper();
 
     @Override
-    public JSONObject map(JSONObject objectToMap, String contract) {
+    public JSONObject map(JSONObject objectToMap, String contract) throws NoSuchTranslatorException {
         JSONObject mapped = super.map(objectToMap, contract);
         switch (contract) {
             case ContractTypes
