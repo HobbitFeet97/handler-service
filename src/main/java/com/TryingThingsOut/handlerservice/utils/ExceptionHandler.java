@@ -16,8 +16,13 @@ public class ExceptionHandler {
             Exception.class, HttpStatus.INTERNAL_SERVER_ERROR
     );
 
+    private static HttpStatus getStatusFromException(Exception e) {
+        HttpStatus status = exceptionToStatus.get(e.getClass());
+        return status == null ? HttpStatus.INTERNAL_SERVER_ERROR : status;
+    }
+
     public ResponseEntity handleException(Exception exception) {
-        HttpStatus status = exceptionToStatus.get(exception.getClass());
+        HttpStatus status = getStatusFromException(exception);
         return ResponseEntity.status(status.value()).body(ErrorMessage.builder()
                 .errorCode(String.valueOf(status.value()))
                 .errorMessage(exception.getMessage())
