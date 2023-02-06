@@ -1,0 +1,6 @@
+{
+  "id": "${id}",
+  "visibleExpression": "${visibleExpression}",
+  "label": "${label}",
+  "type": "${type}"
+}

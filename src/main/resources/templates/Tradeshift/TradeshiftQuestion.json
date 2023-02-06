@@ -1,0 +1,10 @@
+{
+  "id": "${data-point}",
+  "type": "${type}",
+  "props": {
+    "text": "${label}"
+  },
+  "behaviour": {
+    "visibility": "${vis-behaviour}"
+  }
+}

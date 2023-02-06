@@ -1,0 +1,35 @@
+server:
+  port: 8090
+
+smart-serve-question:
+  attributes:
+    id:
+      mappedKey: id
+      default:
+    visibleExpression:
+      mappedKey: visibleRule
+      default:
+    label:
+      mappedKey: label
+      default:
+    type:
+      mappedKey: type
+      default:
+
+trade-shift-question:
+  attributes:
+    id:
+      mappedKey: id
+      default:
+    visibleExpression:
+      mappedKey: vis-behaviour
+      default:
+    label:
+      mappedKey: label
+      default:
+    type:
+      mappedKey: type
+      default:
+    bdp:
+      mappedKey: data-point
+      default: unknown

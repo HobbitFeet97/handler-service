@@ -1,0 +1,16 @@
+{
+  "id": {
+    "mappedKey": "id",
+    "default": ""
+  },
+  "name": {
+    "mappedKey": "name",
+    "default": "Unknown Section Name"
+  },
+  "questions": {
+    "isNestedMapping": true,
+    "mappedKey": "questions",
+    "default": [],
+    "nestedContract": "SmartServeQuestion"
+  }
+}

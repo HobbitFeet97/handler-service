@@ -1,0 +1,16 @@
+{
+  "caseData": {
+    "mappedKey": "caseData",
+    "default": {}
+  },
+  "caseId": {
+    "mappedKey": "caseId",
+    "default": "Unknown case"
+  },
+  "sections": {
+    "mappedKey": "views",
+    "isNestedMapping": true,
+    "default": [],
+    "nestedContract": "SmartServeSection"
+  }
+}

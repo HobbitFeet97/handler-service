@@ -1,0 +1,24 @@
+{
+  "id": {
+    "mappedKey": "id",
+    "default": ""
+  },
+  "visibleRule": {
+    "mappedKey": "visibleExpression",
+    "default": ""
+  },
+  "props.text": {
+    "mappedKey": "label",
+    "default": ""
+  },
+  "props.type": {
+    "mappedKey": "type",
+    "default": "",
+    "valueTranslate": {
+      "TEXT_BOX": "TEXT",
+      "SINGLE_SELECT": "DROPDOWN",
+      "MULTI_SELECT": "MULTIDROPDOWN",
+      "RADIOBOX": "RADIOBUTTON"
+    }
+  }
+}

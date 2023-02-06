@@ -1,0 +1,22 @@
+{
+  "id": {
+    "mappedKey": "id",
+    "default": ""
+  },
+  "visibleExpression": {
+    "mappedKey": "vis-behaviour",
+    "default": ""
+  },
+  "label": {
+    "mappedKey": "label",
+    "default": ""
+  },
+  "type": {
+    "mappedKey": "type",
+    "default": ""
+  },
+  "bdp": {
+    "mappedKey": "data-point",
+    "default": "unknown"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": {
+    "mappedKey": "identifier",
+    "default": ""
+  },
+  "name": {
+    "mappedKey": "title",
+    "default": "Unknown Section Name"
+  },
+  "questions": {
+    "isNestedMapping": true,
+    "mappedKey": "questions",
+    "default": [],
+    "nestedContract": "TradeShiftQuestion"
+  }
+}

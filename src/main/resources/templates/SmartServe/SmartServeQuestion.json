@@ -1,0 +1,9 @@
+{
+  "id": "${id}",
+  "type": "QUESTION",
+  "visibleRule": "${visibleRule}",
+  "props": {
+    "text": "${label}",
+    "type": "${type}"
+  }
+}

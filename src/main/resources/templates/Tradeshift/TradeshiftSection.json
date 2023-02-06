@@ -1,0 +1,9 @@
+{
+  "identifier": "${identifier}",
+  "props": {
+    "title": "${title}"
+  },
+  "views": {
+    "viewItems": ${questions}
+  }
+}

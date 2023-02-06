@@ -1,0 +1,10 @@
+{
+  "ACTIONS": [
+    {
+      "type": "Continue"
+    },
+    {
+      "type": "Save"
+    }
+  ]
+}
